@@ -4,7 +4,6 @@
 This is a simple library management app that allows the owner to:
 
 - Keep a list of all books
-
 ```/books```
 
 - Listing details for a single book 
