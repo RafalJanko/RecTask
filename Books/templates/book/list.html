@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Books</title>
+</head>
+<body>
+<input type="submit" value="Add book"
+    onclick="window.location='add/book/';" />
+<input type="submit" value="Import book"
+    onclick="window.location='import/book/';" />
+
+<form method="GET" action="">
+    <p>Search your database by:</p>
+    <input type="text" name="title" placeholder="Title"/><br>
+    <input type="text" name="author" placeholder="Author"/><br>
+    <input type="text" name="language" placeholder="Language"/><br>
+    <input type="number" name="startyear" placeholder="Published year: start"/>
+    <input type="number" name="endyear" placeholder="Published year: end"/><br>
+    <input type="submit" value="Search"/>
+</form>
+{% for instance in object_list %}
+<p><b>Id:</b> {{ instance.id }} <b>Title:</b> {{instance.title}} <b>Authors:</b> {{instance.authors}} <b>Language:</b> {{instance.language}} <b>Publishing year:</b> {{instance.publishedDate}}
+<b>No. of pages:</b> {{instance.pageCount}} <b>industryIdentifiers:</b> {{instance.industryIdentifiers}} <b>imagelinks:</b> {{instance.imageLinks}}</p></p>
+
+{% endfor %}
+<br>
+<br>
+</body>
+</html>
